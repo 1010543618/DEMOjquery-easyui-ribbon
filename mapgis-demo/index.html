@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href="../jquery-easyui/easyui.css">
+	<link rel="stylesheet" type="text/css" href="../jquery-easyui/icon.css">
+	<link rel="stylesheet" type="text/css" href="../ribbon.css">
+	<link rel="stylesheet" type="text/css" href="../ribbon-icon.css">
+	<link rel="stylesheet" type="text/css" href="mapgis-ribbon-icon.css">
+	<script type="text/javascript" src="../jquery-easyui/jquery.min.js"></script>
+	<script type="text/javascript" src="../jquery-easyui/jquery.easyui.min.js"></script>
+	<script type="text/javascript" src="../jquery.ribbon.js"></script>
+</head>
+<body>
+	<div id="mapgis-ribbon"></div>
+	<script>
+		window.onload = function(){
+			var om_ribbon_data = {
+          selected:0, //默认第几个是选择的
+          tabs:[{
+              title:'开始',
+              name:"om.load('om_base.js')",
+              groups:[{
+                  title:'地图操作',
+                  tools:[{
+                      name:'om_func.zoom_in()',
+                      text:'放大',
+                      iconCls:'icon-zoom-in icon-large',
+                      iconAlign:'top',
+                      size:'large'
+                  },{
+                      name:'om_func.zoom_out()',
+                      text:'缩小',
+                      iconCls:'icon-zoom-out icon-large',
+                      iconAlign:'top',
+                      size:'large'
+                  },{
+                      name:'om_func.move()',
+                      text:'移动',
+                      iconCls:'icon-move icon-large',
+                      iconAlign:'top',
+                      size:'large'
+                  },{
+                      name:'om_func.update()',
+                      text:'更新',
+                      iconCls:'icon-update icon-large',
+                      iconAlign:'top',
+                      size:'large'
+                  },{
+                      name:'om_func.reset()',
+                      text:'复位',
+                      iconCls:'icon-reset icon-large',
+                      iconAlign:'top',
+                      size:'large'
+                  },{
+                      name:'om_func.zoom_extends()',
+                      text:'全图显示',
+                      iconCls:'icon-zoom-extends icon-large',
+                      iconAlign:'top',
+                      size:'large'
+                  }]
+              }]
+          },{
+              title:'查询',
+              groups:[{
+                  title:'基本查询',
+                  dir:'v',
+                  tools:[{
+                      name:'om_func.element_query()',
+                      text:'要素查询',
+                      iconCls:'icon-element-query icon-small'
+                  },{
+                      name:'om_func.name_query()',
+                      text:'名称查询',
+                      iconCls:'icon-name-query icon-small'
+                  },{
+                      type:'menubutton',
+                      name:'do_nothing()',
+                      text:'简单查询',
+                      iconCls:'icon-select icon-small',
+                      menuItems:[{
+                          name:"om_func.simple_query('point')",
+                          text:'画点查询',
+                          iconCls:'icon-ponit-query icon-small'
+                      },{
+                          name:"om_func.simple_query('line')",
+                          text:'画线查询',
+                          iconCls:'icon-line-query icon-small'
+                      },{
+                          name:"om_func.simple_query('circle')",
+                          text:'画圆查询',
+                          iconCls:'icon-circle-query icon-small'
+                      },{
+                          name:"om_func.simple_query('rectangle')",
+                          text:'拉框查询',
+                          iconCls:'icon-rectangle-query icon-small'
+                      },{
+                          name:"om_func.simple_query('polygon')",
+                          text:'多边形查询',
+                          iconCls:'icon-polygon-query icon-large'
+                      }]
+                  }]
+              },{
+                  title:'高级查询',
+                  tools:[{
+                      name:"om_func.condition_query()",
+                      text:'条件查询',
+                      iconCls:'icon-condition-query icon-large',
+                      iconAlign:'top',
+                      size:'large'
+                  },{
+                      text:'按行政区查询',
+                      iconCls:'icon-district-query icon-large',
+                      iconAlign:'top',
+                      size:'large'
+                  },{
+                      text:'导入区文件查询',
+                      iconCls:'icon-file-query icon-large',
+                      iconAlign:'top',
+                      size:'large'
+                  }]
+              }]
+          },{
+              title:'分析&量算',
+              groups:[{
+                  title:'分析',
+                  tools:[{
+                      name:"om_func.profile_analysis()",
+                      text:'剖面分析',
+                      iconCls:'icon-profile-analysis icon-large',
+                      iconAlign:'top',
+                      size:'large'
+                  },{
+                      name:"om_func.path_analysis()",
+                      text:'路径分析',
+                      iconCls:'icon-path-analysis icon-large',
+                      iconAlign:'top',
+                      size:'large'
+                  },{
+                      name:"om_func.topology_analysis()",
+                      text:'拓扑分析',
+                      iconCls:'icon-topology-analysis icon-large',
+                      iconAlign:'top',
+                      size:'large'
+                  },{
+                      name:"om_func.buffer_analysis()",
+                      text:'缓冲区分析',
+                      iconCls:'icon-buffer-analysis icon-large',
+                      iconAlign:'top',
+                      size:'large'
+                  },{
+                      name:"om_func.overlay_analysis()",
+                      text:'叠加分析',
+                      iconCls:'icon-overlay-analysis icon-large',
+                      iconAlign:'top',
+                      size:'large'
+                  },{
+                      name:"om_func.clip_analysis()",
+                      text:'裁剪分析',
+                      iconCls:'icon-clip-analysis icon-large',
+                      iconAlign:'top',
+                      size:'large'
+                  }]
+              },{
+                  title:'量算',
+                  tools:[{
+                      name:"om_func.measure('length')",
+                      text:'距离量算',
+                      iconCls:'icon-measure-length icon-large',
+                      iconAlign:'top',
+                      size:'large'
+                  },{
+                      name:"om_func.measure('area')",
+                      text:'面积量算',
+                      iconCls:'icon-measure-area icon-large',
+                      iconAlign:'top',
+                      size:'large'
+                  }]
+              }]
+          },{
+              title:'编辑',
+          },{
+              title:'裁剪',
+          }]
+      }
+      $('#mapgis-ribbon').ribbon({
+          data:om_ribbon_data,
+          onClick: function(name, target){
+          	// 点击了工具
+          	alert(name);
+            // eval(name);
+          }
+      }).tabs({
+			  onSelect: function(title, index){
+			  	// 选择了tab（从0开始）
+			  	switch(index){
+			  		case '0':
+			  			break;
+			  		default:
+			  			break;
+			  	}
+					console.log(index);
+			  }
+			});
+		}
+	</script>
+</body>
+</html>
