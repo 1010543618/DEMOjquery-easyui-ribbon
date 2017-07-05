@@ -84,3 +84,14 @@
 .icon-measure-area{
 	background:url('images/measure_area.png') no-repeat center center;
 }
+
+/*编辑*/
+.icon-add-point{
+	background:url('images/add_point.png') no-repeat center center;
+}
+.icon-add-line{
+	background:url('images/add_line.png') no-repeat center center;
+}
+.icon-add-polygon{
+	background:url('images/add_polygon.png') no-repeat center center;
+}
