@@ -1,0 +1,1060 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<body>
+<div id="toolbar">
+  <div class="tool" id="主页">
+    <div>
+      <div class="toolItem1" id="selectObj" onclick="execute(1021,0)">
+        <div>
+          <img alt="" src="images/choose.png"/>
+        </div>
+        <div>
+          <a>选择</a>
+        </div>
+      </div>
+      <div class="toolItem2" onclick="execute(1022,0)">
+        <img alt="" src="images/attribute.png"/><a>属性</a>
+      </div>
+      <div class="toolItem2" id="information" onclick="execute(1023,0,'select','information')">
+        <img alt="" src="images/information.png"/><a>信息</a>
+      </div>
+      <div class="toolItem2" id="areaSelection" onclick="execute(1024,0,'select','areaSelection')">
+        <img alt="" src="images/area.png"/><a>区域选择</a>
+      </div>
+      <div class="grapName">
+        <a>选择</a>
+      </div>
+    </div>
+    <div style=" width:124px;">
+      <div class="toolItem1" id="timeSlider" onclick="execute(1065,4,'pressDown_Check','timeSlider')">
+        <div>
+          <img alt="" src="images/time.png"/>
+        </div>
+        <div>
+          <a>时间滑块</a>
+        </div>
+      </div>
+      <div class="toolItem1" id="sun" onclick="execute(1026,0,'pressDown_Check','sun')">
+        <div>
+          <img alt="" src="images/sun.png"/>
+        </div>
+        <div>
+          <a>太阳</a>
+        </div>
+      </div>
+      <div class="grapName">
+        <a>视图</a>
+      </div>
+    </div>
+    <div style=" width:124px;">
+      <div class="toolItem1" id="shadow" onclick="execute(2118,0,'pressDown_Check','shadow')">
+        <div>
+          <img alt="" src="images/shadow.png"/>
+        </div>
+        <div>
+          <a>阴影</a>
+        </div>
+      </div>
+      <div class="toolItem1" id="undergroundMode" onclick="execute(1027,0,'pressDown_Check','undergroundMode')">
+        <div>
+          <img alt="" src="images/underground.png"/>
+        </div>
+        <div>
+          <a>地下模式</a>
+        </div>
+      </div>
+      <div class="grapName">
+        <a>模式</a>
+      </div>
+    </div>
+    <div style=" width:310px;">
+      <div class="toolItem1" onclick="execute(1013,8)">
+        <div>
+          <img alt="" src="images/layer.png"/>
+        </div>
+        <div>
+          <a>特征图层</a>
+        </div>
+      </div>
+      <div class="toolItem1" onclick="execute(1014,2)">
+        <div>
+          <img alt="" src="images/grid.png"/>
+        </div>
+        <div>
+          <a>栅格图层</a>
+        </div>
+      </div>
+      <div class="toolItem1" onclick="execute(1016,0)">
+        <div>
+          <img alt="" src="images/savorPoint.png"/>
+        </div>
+        <div>
+          <a>兴趣点</a>
+        </div>
+      </div>
+      <div class="toolItem1" onclick="execute(1017,0)">
+        <div>
+          <img alt="" src="images/treeInformation.png"/>
+        </div>
+        <div>
+          <a>树信息</a>
+        </div>
+      </div>
+      <div class="toolItem1" onclick="execute(1018,0)">
+        <div>
+          <img alt="" src="images/group.png"/>
+        </div>
+        <div>
+          <a>创建组</a>
+        </div>
+      </div>
+      <div class="grapName">
+        <a>添加</a>
+      </div>
+    </div>
+    <div>
+      <div class="toolItem1" id="paste" onclick="execute(1030,0)">
+        <div>
+          <img alt="" src="images/paste.png"/>
+        </div>
+        <div>
+          <a>粘贴</a>
+        </div>
+      </div>
+      <div class="toolItem2" onclick="execute(1031,0)">
+        <div>
+          <img alt="" src="images/copy.png"/>
+        </div>
+        <div>
+          <a>复制</a>
+        </div>
+      </div>
+      <div class="toolItem2" onclick="execute(1032,0)">
+        <div>
+          <img alt="" src="images/shear.png"/>
+        </div>
+        <div>
+          <a>剪切</a>
+        </div>
+      </div>
+      <div class="toolItem2" onclick="execute(1033,0)">
+        <div>
+          <img alt="" src="images/delete.png"/>
+        </div>
+        <div>
+          <a>删除</a>
+        </div>
+      </div>
+      <div class="grapName">
+        <a>剪切板</a>
+      </div>
+    </div>
+  </div>
+  <div class="tool" id="分析">
+    <div style=" width:310px;">
+      <div class="toolItem1" id="HorizontalMeasure" onclick="execute(1034,0,'Measure','HorizontalMeasure')">
+        <div>
+          <img alt="" src="images/horizontal.png"/>
+        </div>
+        <div>
+          <a>水平距离</a>
+        </div>
+      </div>
+      <div class="toolItem1" id="spaceMeasure" onclick="execute(1035,0,'Measure','spaceMeasure')">
+        <div>
+          <img alt="" src="images/space.png"/>
+        </div>
+        <div>
+          <a>空间距离</a>
+        </div>
+      </div>
+      <div class="toolItem1" id="verticalDistance" onclick="execute(1036,0,'Measure','verticalDistance')">
+        <div>
+          <img alt="" src="images/vertical.png"/>
+        </div>
+        <div>
+          <a>垂直距离</a>
+        </div>
+      </div>
+      <div class="toolItem1" id="terrainArea" onclick="execute(1165,0,'Measure','terrainArea')">
+        <div>
+          <img alt="" src="images/area.png"/>
+        </div>
+        <div>
+          <a>地形面积</a>
+        </div>
+      </div>
+      <div class="toolItem1" id="threeDArea" onclick="execute(1037,0,'Measure','threeDArea')">
+        <div>
+          <img alt="" src="images/threeDarea.png"/>
+        </div>
+        <div>
+          <a>3D面积</a>
+        </div>
+      </div>
+      <div class="grapName">
+        <a>测量工具</a>
+      </div>
+    </div>
+    <div style=" width:310px;">
+      <div class="toolItem1" id="ContourMap" onclick="createContourMap()">
+        <div>
+          <img alt="" src="images/denggao.png"/>
+        </div>
+        <div>
+          <a>等高线图</a>
+        </div>
+      </div>
+      <div class="toolItem1" onclick="SlopeAnalysis()">
+        <div>
+          <img alt="" src="images/Slope.png"/>
+        </div>
+        <div>
+          <a>坡度分析</a>
+        </div>
+      </div>
+      <div class="toolItem1" onclick="execute(1042,0)">
+        <div>
+          <img alt="" src="images/path.png"/>
+        </div>
+        <div>
+          <a>路径分析</a>
+        </div>
+      </div>
+      <div class="toolItem1" onclick="execute(1043,0)">
+        <div>
+          <img alt="" src="images/poumian.png"/>
+        </div>
+        <div>
+          <a>剖面分析</a>
+        </div>
+      </div>
+      <div class="toolItem1" onclick="execute(1044,0)">
+        <div>
+          <img alt="" src="images/yanmofenxi.png"/>
+        </div>
+        <div>
+          <a>淹没分析</a>
+        </div>
+      </div>
+      <div class="grapName">
+        <a>地形分析</a>
+      </div>
+    </div>
+    <div style=" width:186px;">
+      <div class="toolItem1" onclick="execute(1046,0)">
+        <div>
+          <img alt="" src="images/sight.png"/>
+        </div>
+        <div>
+          <a>视线分析</a>
+        </div>
+      </div>
+      <div class="toolItem1" onclick="execute(2117,0)">
+        <div>
+          <img alt="" src="images/threeD.png"/>
+        </div>
+        <div>
+          <a>3D视域</a>
+        </div>
+      </div>
+      <div class="toolItem1" onclick="execute(1047,0)">
+        <div>
+          <img alt="" src="images/perspective.png"/>
+        </div>
+        <div>
+          <a>视域分析</a>
+        </div>
+      </div>
+      <div class="grapName">
+        <a>视域</a>
+      </div>
+    </div>
+    <div style=" width:62px; ">
+      <div class="toolItem1" id="collision" onclick="execute(1140,0,'pressDown_Check','collision')">
+        <div>
+          <img alt="" src="images/pengzhuang.png"/>
+        </div>
+        <div>
+          <a>碰撞检测</a>
+        </div>
+      </div>
+      <div class="grapName">
+        <a>检测</a>
+      </div>
+    </div>
+  </div>
+  <div class="tool" id="导航">
+    <div style=" width:186px;">
+      <div class="toolItem1" id="dragMode" onclick="execute(1049,0,'dragMode','dragMode')">
+        <div>
+          <img alt="" src="images/drag.png"/>
+        </div>
+        <div>
+          <a>拖动模式</a>
+        </div>
+      </div>
+      <div class="toolItem1" id="Slide" onclick="execute(1050,0,'Slide','Slide')">
+        <div>
+          <img alt="" src="images/huadong.png"/>
+        </div>
+        <div>
+          <a>滑动模式</a>
+        </div>
+      </div>
+      <div class="toolItem1" id="turn" onclick="execute(1051,0,'turn','turn')">
+        <div>
+          <img alt="" src="images/zhuangwan.png"/>
+        </div>
+        <div>
+          <a>转弯模式</a>
+        </div>
+      </div>
+      <div class="grapName">
+        <a>导航模式</a>
+      </div>
+    </div>
+    <div style=" width:186px;">
+      <div class="toolItem1" id="threeDMode" onclick="execute(1052,0,'threeDMode','threeDMode')">
+        <div>
+          <img alt="" src="images/threeD_.png"/>
+        </div>
+        <div>
+          <a>3D导航</a>
+        </div>
+      </div>
+      <div class="toolItem1" id="twoDMode" onclick="execute(1053,0,'twoDMode','twoDMode')">
+        <div>
+          <img alt="" src="images/twoD.png"/>
+        </div>
+        <div>
+          <a>2D导航</a>
+        </div>
+      </div>
+      <div class="toolItem1" id="northMode" onclick="execute(1054,0,'northMode','northMode')">
+        <div>
+          <img alt="" src="images/zhibeidaohang.png"/>
+        </div>
+        <div>
+          <a>指北导航</a>
+        </div>
+      </div>
+      <div class="grapName">
+        <a>地图模式</a>
+      </div>
+    </div>
+    <div style=" width:124px;">
+      <div class="toolItem1" onclick="zoomBtn()">
+        <div>
+          <img alt="" src="images/suofang.png"/>
+        </div>
+        <div>
+          <a>缩放</a>
+        </div>
+      </div>
+      <div class="toolItem1" onclick="execute(1056,0)">
+        <div>
+          <img alt="" src="images/zhibeizhen.png"/>
+        </div>
+        <div>
+          <a>指北针</a>
+        </div>
+      </div>
+      <div class="grapName">
+        <a>导航到</a>
+      </div>
+    </div>
+    <div>
+      <div class="toolItem1" id="rotate" onclick="execute(1057,0,'track','rotate')">
+        <div>
+          <img alt="" src="images/huanrao.png"/>
+        </div>
+        <div>
+          <a>环绕模式</a>
+        </div>
+      </div>
+      <div class="toolItem2" id="OvalRotate" onclick="execute(1057,1,'track','OvalRotate')">
+        <img alt="" src="images/tuoyuan.png"/><a>椭圆环绕</a>
+      </div>
+      <div class="toolItem2" id="ArcPattern" onclick="execute(1057,2,'track','ArcPattern')">
+        <img alt="" src="images/Arc.png"/><a>弧形环绕</a>
+      </div>
+      <div class="toolItem2" id="LinePattern" onclick="execute(1057,3,'track','LinePattern')">
+        <img alt="" src="images/line.png"/><a>直线模式</a>
+      </div>
+      <div class="grapName">
+        <a>跟踪模式</a>
+      </div>
+    </div>
+    <div style=" width:496px;">
+      <div class="toolItem1" onclick="execute(1057,4)">
+        <div>
+          <img alt="" src="images/houmian.png"/>
+        </div>
+        <div>
+          <a>对象后方</a>
+        </div>
+      </div>
+      <div class="toolItem1" onclick="execute(1057,5)">
+        <div>
+          <img alt="" src="images/up.png"/>
+        </div>
+        <div>
+          <a>对象上方</a>
+        </div>
+      </div>
+      <div class="toolItem1" onclick="execute(1057,6)">
+        <div>
+          <img alt="" src="images/down.png"/>
+        </div>
+        <div>
+          <a>对象下方</a>
+        </div>
+      </div>
+      <div class="toolItem1" onclick="execute(1057,7)">
+        <div>
+          <img alt="" src="images/right.png"/>
+        </div>
+        <div>
+          <a>对象右侧</a>
+        </div>
+      </div>
+      <div class="toolItem1" onclick="execute(1057,8)">
+        <div>
+          <img alt="" src="images/left.png"/>
+        </div>
+        <div>
+          <a>对象左侧</a>
+        </div>
+      </div>
+      <div class="toolItem1" onclick="execute(1057,9)">
+        <div>
+          <img alt="" src="images/houshang.png"/>
+        </div>
+        <div>
+          <a>从后上方</a>
+        </div>
+      </div>
+      <div class="toolItem1" onclick="execute(1057,10)">
+        <div>
+          <img alt="" src="images/jiashi.png"/>
+        </div>
+        <div>
+          <a>驾驶视角</a>
+        </div>
+      </div>
+      <div class="toolItem1" onclick="execute(1057,11)">
+        <div>
+          <img alt="" src="images/dimain.png"/>
+        </div>
+        <div>
+          <a>地面视点</a>
+        </div>
+      </div>
+      <div class="grapName">
+        <a>观测对象模式</a>
+      </div>
+    </div>
+  </div>
+  <div class="tool" id="视图">
+    <div style=" width:248px;">
+      <div class="toolItem1" onclick="zoomIn()">
+        <div>
+          <img alt="" src="images/zoomIn.png"/>
+        </div>
+        <div>
+          <a>放大</a>
+        </div>
+      </div>
+      <div class="toolItem1" onclick="zoomOut()">
+        <div>
+          <img alt="" src="images/zoomOut.png"/>
+        </div>
+        <div>
+          <a>缩小</a>
+        </div>
+      </div>
+      <div class="toolItem1" onclick="FullImage()">
+        <div>
+          <img alt="" src="images/all.png"/>
+        </div>
+        <div>
+          <a>全图</a>
+        </div>
+      </div>
+      <div class="toolItem1" onclick="zoomIn2DMap()">
+        <div>
+          <img alt="" src="images/Eye.png"/>
+        </div>
+        <div>
+          <a>鹰眼</a>
+        </div>
+      </div>
+      <div class="grapName">
+        <a>基本操作</a>
+      </div>
+    </div>
+    <div style=" width:310px;">
+      <div class="toolItem1" id="NavigationCtl" onclick="execute(1065,0,'pressDown_Check','NavigationCtl')">
+        <div>
+          <img alt="" src="images/kongjian.png"/>
+        </div>
+        <div>
+          <a>导航控件</a>
+        </div>
+      </div>
+      <div class="toolItem1" id="CenterSign" onclick="execute(1065,1,'pressDown_Check','CenterSign')">
+        <div>
+          <img alt="" src="images/shizi.png"/>
+        </div>
+        <div>
+          <a>中心十字</a>
+        </div>
+      </div>
+      <div class="toolItem1" id="StatusBar" onclick="execute(1065,2,'pressDown_Check','StatusBar')">
+        <div>
+          <img alt="" src="images/zhuangtai.png"/>
+        </div>
+        <div>
+          <a>状态栏</a>
+        </div>
+      </div>
+      <div class="toolItem1" id="ScaleBar" onclick="execute(1065,3,'pressDown_Check','ScaleBar')">
+        <div>
+          <img alt="" src="images/bili.png"/>
+        </div>
+        <div>
+          <a>比例尺</a>
+        </div>
+      </div>
+      <div class="toolItem1" id="GraphicHUD" onclick="execute(1065,5,'pressDown_Check','GraphicHUD')">
+        <div>
+          <img alt="" src="images/hud.png"/>
+        </div>
+        <div>
+          <a>图形HUD</a>
+        </div>
+      </div>
+      <div class="grapName">
+        <a>控件</a>
+      </div>
+    </div>
+  </div>
+  <div class="tool" id="对象">
+    <div style=" width:124px;">
+      <div class="toolItem1" onclick="execute(1012,0)">
+        <div>
+          <img alt="" src="images/wenben.png"/>
+        </div>
+        <div>
+          <a>文本</a>
+        </div>
+      </div>
+      <div class="toolItem1" onclick="execute(1012,1)">
+        <div>
+          <img alt="" src="images/tupian.png"/>
+        </div>
+        <div>
+          <a>图片</a>
+        </div>
+      </div>
+      <div class="grapName">
+        <a>标签</a>
+      </div>
+    </div>
+    <div style=" width:496px;">
+      <div class="toolItem1" onclick="execute(1012,4)">
+        <div>
+          <img alt="" src="images/zhexian.png"/>
+        </div>
+        <div>
+          <a>折线</a>
+        </div>
+      </div>
+      <div class="toolItem1" onclick="execute(1012,5)">
+        <div>
+          <img alt="" src="images/duobianxing.png"/>
+        </div>
+        <div>
+          <a>多边形</a>
+        </div>
+      </div>
+      <div class="toolItem1" onclick="execute(1012,6)">
+        <div>
+          <img alt="" src="images/juxing.png"/>
+        </div>
+        <div>
+          <a>矩形</a>
+        </div>
+      </div>
+      <div class="toolItem1" onclick="execute(1012,7)">
+        <div>
+          <img alt="" src="images/zhengduobian.png"/>
+        </div>
+        <div>
+          <a>正多边形</a>
+        </div>
+      </div>
+      <div class="toolItem1" onclick="execute(1012,9)">
+        <div>
+          <img alt="" src="images/yuan.png"/>
+        </div>
+        <div>
+          <a>圆形</a>
+        </div>
+      </div>
+      <div class="toolItem1" onclick="execute(1012,10)">
+        <div>
+          <img alt="" src="images/tuoyuan.png"/>
+        </div>
+        <div>
+          <a>椭圆</a>
+        </div>
+      </div>
+      <div class="toolItem1" onclick="execute(1012,11)">
+        <div>
+          <img alt="" src="images/hu.png"/>
+        </div>
+        <div>
+          <a>弧形</a>
+        </div>
+      </div>
+      <div class="toolItem1" onclick="execute(1012,8)">
+        <div>
+          <img alt="" src="images/jiantou.png"/>
+        </div>
+        <div>
+          <a>2D箭头</a>
+        </div>
+      </div>
+      <div class="grapName">
+        <a>2D对象</a>
+      </div>
+    </div>
+    <div style=" width:310px;">
+      <div class="toolItem1" onclick="execute(1012,13)">
+        <div>
+          <img alt="" src="images/sanweimoxing.png"/>
+        </div>
+        <div>
+          <a>三维模型</a>
+        </div>
+      </div>
+      <div class="toolItem1" onclick="execute(1012,14)">
+        <div>
+          <img alt="" src="images/object.png"/>
+        </div>
+        <div>
+          <a>建筑物</a>
+        </div>
+      </div>
+      <div class="toolItem1" onclick="execute(1012,21)">
+        <div>
+          <img alt="" src="images/qiu.png"/>
+        </div>
+        <div>
+          <a>球体</a>
+        </div>
+      </div>
+      <div class="toolItem1" onclick="execute(1012,24)">
+        <div>
+          <img alt="" src="images/sanweijiantou.png"/>
+        </div>
+        <div>
+          <a>三维箭头</a>
+        </div>
+      </div>
+      <div class="toolItem1" onclick="execute(1012,20)">
+        <div>
+          <img alt="" src="images/yuanzhu.png"/>
+        </div>
+        <div>
+          <a>圆柱体</a>
+        </div>
+      </div>
+      <div class="grapName">
+        <a>3D对象</a>
+      </div>
+    </div>
+    <div style=" width:124px;">
+      <div class="toolItem1" onclick="execute(1012,26)">
+        <div>
+          <img alt="" src="images/dimian.png"/>
+        </div>
+        <div>
+          <a>地面对象</a>
+        </div>
+      </div>
+      <div class="toolItem1" onclick="execute(1012,27)">
+        <div>
+          <img alt="" src="images/kongzhong.png"/>
+        </div>
+        <div>
+          <a>空中对象</a>
+        </div>
+      </div>
+      <div class="grapName">
+        <a>动态对象</a>
+      </div>
+    </div>
+  </div>
+  <div class="tool" id="图层编辑">
+    <div style=" width:124px;">
+      <div class="toolItem1" onclick="execute(1022,0)">
+        <div>
+          <img alt="" src="images/attribute.png"/>
+        </div>
+        <div>
+          <a>图层属性</a>
+        </div>
+      </div>
+      <div class="toolItem1" onclick="execute(1086,0)">
+        <div>
+          <img alt="" src="images/shuxingbiao.png"/>
+        </div>
+        <div>
+          <a>属性表</a>
+        </div>
+      </div>
+      <div class="grapName">
+        <a>图层</a>
+      </div>
+    </div>
+    <div style=" width:310px;">
+      <div class="toolItem1" id="selectLayerF" onclick="execute(1070,0,'selectElement','selectLayerF')">
+        <div>
+          <img alt="" src="images/choose.png"/>
+        </div>
+        <div>
+          <a>选择</a>
+        </div>
+      </div>
+      <div class="toolItem1" id="aeraSelectF" onclick="execute(1071,0,'selectElement','aeraSelectF')">
+        <div>
+          <img alt="" src="images/area.png"/>
+        </div>
+        <div>
+          <a>区域选择</a>
+        </div>
+      </div>
+      <div class="toolItem1" id="lineSelect" onclick="execute(1072,0,'selectElement','lineSelect')">
+        <div>
+          <img alt="" src="images/line.png"/>
+        </div>
+        <div>
+          <a>画线选择</a>
+        </div>
+      </div>
+      <div class="toolItem1" id="pointSelect" onclick="execute(1073,0,'selectElement','pointSelect')">
+        <div>
+          <img alt="" src="images/huapoint.png"/>
+        </div>
+        <div>
+          <a>画点选择</a>
+        </div>
+      </div>
+      <div class="toolItem1" id="ObjSelect" onclick="execute(1156,0,'selectElement','ObjSelect')">
+        <div>
+          <img alt="" src="images/objectC.png"/>
+        </div>
+        <div>
+          <a>对象选择</a>
+        </div>
+      </div>
+      <div class="grapName">
+        <a>选择</a>
+      </div>
+    </div>
+  </div>
+  <div class="tool" id="演示汇报">
+    <div style=" width:62px;">
+      <div class="toolItem1" onclick="createPresentation()">
+        <div>
+          <img alt="" src="images/chuangjianyanshi.png"/>
+        </div>
+        <div>
+          <a>新建演示</a>
+        </div>
+      </div>
+      <div class="grapName">
+        <a>演示工具</a>
+      </div>
+    </div>
+    <div style=" width:124px;">
+      <div class="toolItem1" onclick="Presentation(1099,0)">
+        <div>
+          <img alt="" src="images/jiaxingqudian.png"/>
+        </div>
+        <div>
+          <a>加兴趣点</a>
+        </div>
+      </div>
+      <div class="toolItem1" onclick="Presentation(1101,0,this)">
+        <div>
+          <img alt="" src="images/jiluguiji.png"/>
+        </div>
+        <div>
+          <a id="recordTxt">记录轨迹</a>
+        </div>
+      </div>
+      <div class="grapName">
+        <a>兴趣点</a>
+      </div>
+    </div>
+    <div style=" width:124px;">
+      <div class="toolItem1" onclick="Presentation(1102,0)">
+        <div>
+          <img alt="" src="images/tianjiabiaoti.png"/>
+        </div>
+        <div>
+          <a>添加标题</a>
+        </div>
+      </div>
+      <div class="toolItem1" onclick="Presentation(1111,0)">
+        <div>
+          <img alt="" src="images/bianjigongju.png"/>
+        </div>
+        <div>
+          <a>编辑工具</a>
+        </div>
+      </div>
+      <div class="grapName">
+        <a>操作</a>
+      </div>
+    </div>
+    <div style=" width:200px;">
+      <div class="toolItem1" onclick="Presentation(1112,0)">
+        <div>
+          <img alt="" src="images/bofang.png"/>
+        </div>
+        <div>
+          <a>播放</a>
+        </div>
+      </div>
+      <div class="toolItem4">
+<a>运行算法&nbsp;&nbsp;</a>
+<select id="algorithm">
+<option>飞行到</option>
+<option>曲线</option>
+</select>
+</div>
+      <div class="toolItem4">
+<a>运行模式&nbsp;&nbsp;</a>
+<select id="flyMode">
+<option>标准</option>
+<option>自动播放</option>
+</select>
+</div>
+      <div class="toolItem4">
+<a>运行速度&nbsp;&nbsp;</a>
+<select id="PlaySpeed">
+<option>非常慢</option>
+<option>慢行</option>
+<option selected="selected">常规</option>
+<option>快速</option>
+<option>非常快</option>
+</select>
+</div>
+      <div class="grapName">
+        <a>播放漫游路线</a>
+      </div>
+    </div>
+    <div style=" width:190px;">
+      <div class="toolItem1" onclick="Presentation(1116,0)">
+        <div>
+          <img alt="" src="images/chuangjianshipin1.png"/>
+        </div>
+        <div>
+          <a>创建视频</a>
+        </div>
+      </div>
+      <div class="toolItem3">
+<a>帧数&nbsp;&nbsp;</a><input type="text" id="Frames" value="25"/></div>
+      <div class="toolItem3">
+<a>尺寸&nbsp;&nbsp;</a>
+<select id="FrameSize">
+<option>当前尺寸</option>
+<option>320*200</option>
+<option>320*240</option>
+<option>384*288</option>
+<option>640*480</option>
+<option>768*576</option>
+<option>720*480</option>
+<option>1280*720</option>
+<option>1920*1080</option>
+</select>
+</div>
+      <div class="toolItem3">
+<input type="checkbox" id="BestQuality" checked="checked"/>&nbsp;&nbsp;&nbsp;<a>最佳质量</a>
+</div>
+      <div class="grapName">
+        <a>播放漫游路线</a>
+      </div>
+    </div>
+  </div>
+  <div class="tool" id="工具">
+    <div style=" width:124px;">
+      <div class="toolItem1" onclick="execute(1067,0)">
+        <div>
+          <img alt="" src="images/ditijietu.png"/>
+        </div>
+        <div>
+          <a>地图截图</a>
+        </div>
+      </div>
+      <div class="toolItem1" onclick="excavation()">
+        <div>
+          <img alt="" src="images/dixingkaiwa.png"/>
+        </div>
+        <div>
+          <a>地形开挖</a>
+        </div>
+      </div>
+      <div class="grapName">
+        <a>实用工具</a>
+      </div>
+    </div>
+    <div style=" width:186px;">
+      <div class="toolItem1" onclick="showAllObj()">
+        <div>
+          <img alt="" src="images/xianshiquanbu.png"/>
+        </div>
+        <div>
+          <a>全部显示</a>
+        </div>
+      </div>
+      <div class="toolItem1" onclick="hiddenAllObj()">
+        <div>
+          <img alt="" src="images/yinchangquanbu.png"/>
+        </div>
+        <div>
+          <a>全部隐藏</a>
+        </div>
+      </div>
+      <div class="toolItem1" onclick="showPipeline()">
+        <div>
+          <img alt="" src="images/zhikan.png"/>
+        </div>
+        <div>
+          <a>只看管线</a>
+        </div>
+      </div>
+      <div class="grapName">
+        <a>查看对象</a>
+      </div>
+    </div>
+    <div style=" width:372px;" id="pipMark">
+      <div class="toolItem1" onclick="heightMark()" id="heightLabel">
+        <div>
+          <img alt="" src="images/choose.png"/>
+        </div>
+        <div>
+          <a>高度标注</a>
+        </div>
+      </div>
+      <div class="toolItem1" onclick="coordLabel()" id="coordLabel">
+        <div>
+          <img alt="" src="images/area.png"/>
+        </div>
+        <div>
+          <a>坐标标注</a>
+        </div>
+      </div>
+      <div class="toolItem1" onclick="SlopeLable()" id="SlopeLable">
+        <div>
+          <img alt="" src="images/objectC.png"/>
+        </div>
+        <div>
+          <a>坡度标注</a>
+        </div>
+      </div>
+      <div class="toolItem1" onclick="clearLabel()">
+        <div>
+          <img alt="" src="images/close.png"/>
+        </div>
+        <div>
+          <a>清除标注</a>
+        </div>
+      </div>
+      <div class="grapName">
+        <a>标注</a>
+      </div>
+    </div>
+  </div>
+
+</div>
+<script type="text/javascript" src="../../jquery-easyui/jquery.min.js"></script>
+<script>
+  var tabs = []
+  var css_string_arr = []
+  // tabs
+  $('#toolbar .tool').each(function(){
+    var tab = {}
+    tab.title = $(this).attr('id')
+    css_string_arr.push('/*' + $(this).attr('id') + '*/')
+    tab.groups = []
+    // groups
+    $(this).children().each(function(){
+      var group = {}
+      group.title = $(this).find('.grapName a').text()
+      $(this).find('.grapName').remove()
+      var tools = []
+      var has_sub_tool = false
+      var sub_tool = {}
+      // tools
+      $(this).children().each(function(){
+        var img_src = $(this).find('img').attr('src') || ''
+        var img_name = /\/(.*?)(?=\.)/.test(img_src) && img_src.match(/\/(.*?)(?=\.)/)[1]
+        css_string_arr.push('.icon-'+img_name+'{background-image: url(\''+img_src+'\')}')
+        if ($(this).hasClass('toolItem1')) {
+          tools.push({
+            name: $(this).attr('onclick'),
+            text: $(this).find('a').text(),
+            iconCls: 'icon-' + img_name + ' icon-large',
+            iconAlign:'top',
+            size:'large'
+          })
+        }else if($(this).hasClass('toolItem2')){
+          if (!has_sub_tool) {
+            sub_tool.type = 'toolbar'
+            sub_tool.dir = 'v'
+            sub_tool.tools = []
+            has_sub_tool = true
+          }
+          sub_tool.tools.push({
+            name: $(this).attr('onclick'),
+            text: $(this).find('a').text(),
+            iconCls: 'icon-' + img_name + ' icon-small',
+          })
+        }else if($(this).hasClass('toolItem3') || $(this).hasClass('toolItem4')){
+          if (!has_sub_tool) {
+            sub_tool.type = 'toolbar'
+            sub_tool.dir = 'v'
+            sub_tool.tools = []
+            has_sub_tool = true
+          }
+
+          console.log($('<div><div/>').text($(this).html()).html().replace(/\r|\n/g, ''))
+          sub_tool.tools.push({
+            type: 'label',
+            text: $('<div><div/>').text($(this).html()).html().replace(/\r|\n/g, ''),
+          })
+        }
+      })
+      if (has_sub_tool) {
+        tools.push(sub_tool)
+      }
+      group.tools = tools
+      tab.groups.push(group)
+    })
+    tabs.push(tab)
+  })
+  $('body').prepend('<pre>' + JSON.stringify(tabs) + '</pre>')
+  $('body').prepend('<pre>' + css_string_arr.join("\n") + '</pre>')
+</script>
+</body>
+</html>
