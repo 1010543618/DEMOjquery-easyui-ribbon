@@ -57,8 +57,8 @@
 
 		window.onload = function(){
 			var om_ribbon_data = {
-        selected:0, //默认第几个是选择的
-        tabs:      [
+        selected: 0, //默认第几个是选择的
+        tabs: [
           {
             "title": "主页",
             "groups": [
@@ -66,7 +66,7 @@
                 "title": "选择",
                 "tools": [
                   {
-                    "name": "execute(1021,0)",
+                    "name": "selectObj",
                     "text": "选择",
                     "iconCls": "icon-choose icon-large",
                     "iconAlign": "top",
@@ -82,12 +82,12 @@
                         "iconCls": "icon-attribute icon-small"
                       },
                       {
-                        "name": "execute(1023,0,'select','information')",
+                        "name": "information",
                         "text": "信息",
                         "iconCls": "icon-information icon-small"
                       },
                       {
-                        "name": "execute(1024,0,'select','areaSelection')",
+                        "name": "areaSelection",
                         "text": "区域选择",
                         "iconCls": "icon-area icon-small"
                       }
@@ -99,14 +99,14 @@
                 "title": "视图",
                 "tools": [
                   {
-                    "name": "execute(1065,4,'pressDown_Check','timeSlider')",
+                    "name": "timeSlider",
                     "text": "时间滑块",
                     "iconCls": "icon-time icon-large",
                     "iconAlign": "top",
                     "size": "large"
                   },
                   {
-                    "name": "execute(1026,0,'pressDown_Check','sun')",
+                    "name": "sun",
                     "text": "太阳",
                     "iconCls": "icon-sun icon-large",
                     "iconAlign": "top",
@@ -118,14 +118,14 @@
                 "title": "模式",
                 "tools": [
                   {
-                    "name": "execute(2118,0,'pressDown_Check','shadow')",
+                    "name": "shadow",
                     "text": "阴影",
                     "iconCls": "icon-shadow icon-large",
                     "iconAlign": "top",
                     "size": "large"
                   },
                   {
-                    "name": "execute(1027,0,'pressDown_Check','undergroundMode')",
+                    "name": "undergroundMode",
                     "text": "地下模式",
                     "iconCls": "icon-underground icon-large",
                     "iconAlign": "top",
@@ -177,7 +177,7 @@
                 "title": "剪切板",
                 "tools": [
                   {
-                    "name": "execute(1030,0)",
+                    "name": "paste",
                     "text": "粘贴",
                     "iconCls": "icon-paste icon-large",
                     "iconAlign": "top",
@@ -215,35 +215,35 @@
                 "title": "测量工具",
                 "tools": [
                   {
-                    "name": "execute(1034,0,'Measure','HorizontalMeasure')",
+                    "name": "HorizontalMeasure",
                     "text": "水平距离",
                     "iconCls": "icon-horizontal icon-large",
                     "iconAlign": "top",
                     "size": "large"
                   },
                   {
-                    "name": "execute(1035,0,'Measure','spaceMeasure')",
+                    "name": "spaceMeasure",
                     "text": "空间距离",
                     "iconCls": "icon-space icon-large",
                     "iconAlign": "top",
                     "size": "large"
                   },
                   {
-                    "name": "execute(1036,0,'Measure','verticalDistance')",
+                    "name": "verticalDistance",
                     "text": "垂直距离",
                     "iconCls": "icon-vertical icon-large",
                     "iconAlign": "top",
                     "size": "large"
                   },
                   {
-                    "name": "execute(1165,0,'Measure','terrainArea')",
+                    "name": "terrainArea",
                     "text": "地形面积",
                     "iconCls": "icon-area icon-large",
                     "iconAlign": "top",
                     "size": "large"
                   },
                   {
-                    "name": "execute(1037,0,'Measure','threeDArea')",
+                    "name": "threeDArea",
                     "text": "3D面积",
                     "iconCls": "icon-threeDarea icon-large",
                     "iconAlign": "top",
@@ -255,7 +255,7 @@
                 "title": "地形分析",
                 "tools": [
                   {
-                    "name": "createContourMap()",
+                    "name": "ContourMap",
                     "text": "等高线图",
                     "iconCls": "icon-denggao icon-large",
                     "iconAlign": "top",
@@ -321,7 +321,7 @@
                 "title": "检测",
                 "tools": [
                   {
-                    "name": "execute(1140,0,'pressDown_Check','collision')",
+                    "name": "collision",
                     "text": "碰撞检测",
                     "iconCls": "icon-pengzhuang icon-large",
                     "iconAlign": "top",
@@ -338,21 +338,21 @@
                 "title": "导航模式",
                 "tools": [
                   {
-                    "name": "execute(1049,0,'dragMode','dragMode')",
+                    "name": "dragMode",
                     "text": "拖动模式",
                     "iconCls": "icon-drag icon-large",
                     "iconAlign": "top",
                     "size": "large"
                   },
                   {
-                    "name": "execute(1050,0,'Slide','Slide')",
+                    "name": "Slide",
                     "text": "滑动模式",
                     "iconCls": "icon-huadong icon-large",
                     "iconAlign": "top",
                     "size": "large"
                   },
                   {
-                    "name": "execute(1051,0,'turn','turn')",
+                    "name": "turn",
                     "text": "转弯模式",
                     "iconCls": "icon-zhuangwan icon-large",
                     "iconAlign": "top",
@@ -364,21 +364,21 @@
                 "title": "地图模式",
                 "tools": [
                   {
-                    "name": "execute(1052,0,'threeDMode','threeDMode')",
+                    "name": "threeDMode",
                     "text": "3D导航",
                     "iconCls": "icon-threeD_ icon-large",
                     "iconAlign": "top",
                     "size": "large"
                   },
                   {
-                    "name": "execute(1053,0,'twoDMode','twoDMode')",
+                    "name": "twoDMode",
                     "text": "2D导航",
                     "iconCls": "icon-twoD icon-large",
                     "iconAlign": "top",
                     "size": "large"
                   },
                   {
-                    "name": "execute(1054,0,'northMode','northMode')",
+                    "name": "northMode",
                     "text": "指北导航",
                     "iconCls": "icon-zhibeidaohang icon-large",
                     "iconAlign": "top",
@@ -409,7 +409,7 @@
                 "title": "跟踪模式",
                 "tools": [
                   {
-                    "name": "execute(1057,0,'track','rotate')",
+                    "name": "rotate",
                     "text": "环绕模式",
                     "iconCls": "icon-huanrao icon-large",
                     "iconAlign": "top",
@@ -420,17 +420,17 @@
                     "dir": "v",
                     "tools": [
                       {
-                        "name": "execute(1057,1,'track','OvalRotate')",
+                        "name": "OvalRotate",
                         "text": "椭圆环绕",
                         "iconCls": "icon-tuoyuan icon-small"
                       },
                       {
-                        "name": "execute(1057,2,'track','ArcPattern')",
+                        "name": "ArcPattern",
                         "text": "弧形环绕",
                         "iconCls": "icon-Arc icon-small"
                       },
                       {
-                        "name": "execute(1057,3,'track','LinePattern')",
+                        "name": "LinePattern",
                         "text": "直线模式",
                         "iconCls": "icon-line icon-small"
                       }
@@ -541,35 +541,35 @@
                 "title": "控件",
                 "tools": [
                   {
-                    "name": "execute(1065,0,'pressDown_Check','NavigationCtl')",
+                    "name": "NavigationCtl",
                     "text": "导航控件",
                     "iconCls": "icon-kongjian icon-large",
                     "iconAlign": "top",
                     "size": "large"
                   },
                   {
-                    "name": "execute(1065,1,'pressDown_Check','CenterSign')",
+                    "name": "CenterSign",
                     "text": "中心十字",
                     "iconCls": "icon-shizi icon-large",
                     "iconAlign": "top",
                     "size": "large"
                   },
                   {
-                    "name": "execute(1065,2,'pressDown_Check','StatusBar')",
+                    "name": "StatusBar",
                     "text": "状态栏",
                     "iconCls": "icon-zhuangtai icon-large",
                     "iconAlign": "top",
                     "size": "large"
                   },
                   {
-                    "name": "execute(1065,3,'pressDown_Check','ScaleBar')",
+                    "name": "ScaleBar",
                     "text": "比例尺",
                     "iconCls": "icon-bili icon-large",
                     "iconAlign": "top",
                     "size": "large"
                   },
                   {
-                    "name": "execute(1065,5,'pressDown_Check','GraphicHUD')",
+                    "name": "GraphicHUD",
                     "text": "图形HUD",
                     "iconCls": "icon-hud icon-large",
                     "iconAlign": "top",
@@ -749,35 +749,35 @@
                 "title": "选择",
                 "tools": [
                   {
-                    "name": "execute(1070,0,'selectElement','selectLayerF')",
+                    "name": "selectLayerF",
                     "text": "选择",
                     "iconCls": "icon-choose icon-large",
                     "iconAlign": "top",
                     "size": "large"
                   },
                   {
-                    "name": "execute(1071,0,'selectElement','aeraSelectF')",
+                    "name": "aeraSelectF",
                     "text": "区域选择",
                     "iconCls": "icon-area icon-large",
                     "iconAlign": "top",
                     "size": "large"
                   },
                   {
-                    "name": "execute(1072,0,'selectElement','lineSelect')",
+                    "name": "lineSelect",
                     "text": "画线选择",
                     "iconCls": "icon-line icon-large",
                     "iconAlign": "top",
                     "size": "large"
                   },
                   {
-                    "name": "execute(1073,0,'selectElement','pointSelect')",
+                    "name": "pointSelect",
                     "text": "画点选择",
                     "iconCls": "icon-huapoint icon-large",
                     "iconAlign": "top",
                     "size": "large"
                   },
                   {
-                    "name": "execute(1156,0,'selectElement','ObjSelect')",
+                    "name": "ObjSelect",
                     "text": "对象选择",
                     "iconCls": "icon-objectC icon-large",
                     "iconAlign": "top",
@@ -954,21 +954,21 @@
                 "title": "标注",
                 "tools": [
                   {
-                    "name": "heightMark()",
+                    "name": "heightLabel",
                     "text": "高度标注",
                     "iconCls": "icon-choose icon-large",
                     "iconAlign": "top",
                     "size": "large"
                   },
                   {
-                    "name": "coordLabel()",
+                    "name": "coordLabel",
                     "text": "坐标标注",
                     "iconCls": "icon-area icon-large",
                     "iconAlign": "top",
                     "size": "large"
                   },
                   {
-                    "name": "SlopeLable()",
+                    "name": "SlopeLable",
                     "text": "坡度标注",
                     "iconCls": "icon-objectC icon-large",
                     "iconAlign": "top",
@@ -987,7 +987,7 @@
           }
         ]
       }
-      $('#skyline-ribbon').ribbon({
+      window.skyline_ribbon = $('#skyline-ribbon').ribbon({
           data:om_ribbon_data,
           onClick: function(name, target){
           	// 点击了工具
@@ -1011,6 +1011,305 @@
 			  	}
 			  }
 			});
+      skyline_ribbon.btns = {
+        "selectObj": {
+          "exex": "execute(1021,0)"
+        },
+        "execute(1022,0)": {
+          "exex": "execute(1022,0)"
+        },
+        "information": {
+          "exex": "execute(1023,0,'select','information')"
+        },
+        "areaSelection": {
+          "exex": "execute(1024,0,'select','areaSelection')"
+        },
+        "timeSlider": {
+          "exex": "execute(1065,4,'pressDown_Check','timeSlider')"
+        },
+        "sun": {
+          "exex": "execute(1026,0,'pressDown_Check','sun')"
+        },
+        "shadow": {
+          "exex": "execute(2118,0,'pressDown_Check','shadow')"
+        },
+        "undergroundMode": {
+          "exex": "execute(1027,0,'pressDown_Check','undergroundMode')"
+        },
+        "execute(1013,8)": {
+          "exex": "execute(1013,8)"
+        },
+        "execute(1014,2)": {
+          "exex": "execute(1014,2)"
+        },
+        "execute(1016,0)": {
+          "exex": "execute(1016,0)"
+        },
+        "execute(1017,0)": {
+          "exex": "execute(1017,0)"
+        },
+        "execute(1018,0)": {
+          "exex": "execute(1018,0)"
+        },
+        "paste": {
+          "exex": "execute(1030,0)"
+        },
+        "execute(1031,0)": {
+          "exex": "execute(1031,0)"
+        },
+        "execute(1032,0)": {
+          "exex": "execute(1032,0)"
+        },
+        "execute(1033,0)": {
+          "exex": "execute(1033,0)"
+        },
+        "HorizontalMeasure": {
+          "exex": "execute(1034,0,'Measure','HorizontalMeasure')"
+        },
+        "spaceMeasure": {
+          "exex": "execute(1035,0,'Measure','spaceMeasure')"
+        },
+        "verticalDistance": {
+          "exex": "execute(1036,0,'Measure','verticalDistance')"
+        },
+        "terrainArea": {
+          "exex": "execute(1165,0,'Measure','terrainArea')"
+        },
+        "threeDArea": {
+          "exex": "execute(1037,0,'Measure','threeDArea')"
+        },
+        "ContourMap": {
+          "exex": "createContourMap()"
+        },
+        "SlopeAnalysis()": {
+          "exex": "SlopeAnalysis()"
+        },
+        "execute(1042,0)": {
+          "exex": "execute(1042,0)"
+        },
+        "execute(1043,0)": {
+          "exex": "execute(1043,0)"
+        },
+        "execute(1044,0)": {
+          "exex": "execute(1044,0)"
+        },
+        "execute(1046,0)": {
+          "exex": "execute(1046,0)"
+        },
+        "execute(2117,0)": {
+          "exex": "execute(2117,0)"
+        },
+        "execute(1047,0)": {
+          "exex": "execute(1047,0)"
+        },
+        "collision": {
+          "exex": "execute(1140,0,'pressDown_Check','collision')"
+        },
+        "dragMode": {
+          "exex": "execute(1049,0,'dragMode','dragMode')"
+        },
+        "Slide": {
+          "exex": "execute(1050,0,'Slide','Slide')"
+        },
+        "turn": {
+          "exex": "execute(1051,0,'turn','turn')"
+        },
+        "threeDMode": {
+          "exex": "execute(1052,0,'threeDMode','threeDMode')"
+        },
+        "twoDMode": {
+          "exex": "execute(1053,0,'twoDMode','twoDMode')"
+        },
+        "northMode": {
+          "exex": "execute(1054,0,'northMode','northMode')"
+        },
+        "zoomBtn()": {
+          "exex": "zoomBtn()"
+        },
+        "execute(1056,0)": {
+          "exex": "execute(1056,0)"
+        },
+        "rotate": {
+          "exex": "execute(1057,0,'track','rotate')"
+        },
+        "OvalRotate": {
+          "exex": "execute(1057,1,'track','OvalRotate')"
+        },
+        "ArcPattern": {
+          "exex": "execute(1057,2,'track','ArcPattern')"
+        },
+        "LinePattern": {
+          "exex": "execute(1057,3,'track','LinePattern')"
+        },
+        "execute(1057,4)": {
+          "exex": "execute(1057,4)"
+        },
+        "execute(1057,5)": {
+          "exex": "execute(1057,5)"
+        },
+        "execute(1057,6)": {
+          "exex": "execute(1057,6)"
+        },
+        "execute(1057,7)": {
+          "exex": "execute(1057,7)"
+        },
+        "execute(1057,8)": {
+          "exex": "execute(1057,8)"
+        },
+        "execute(1057,9)": {
+          "exex": "execute(1057,9)"
+        },
+        "execute(1057,10)": {
+          "exex": "execute(1057,10)"
+        },
+        "execute(1057,11)": {
+          "exex": "execute(1057,11)"
+        },
+        "zoomIn()": {
+          "exex": "zoomIn()"
+        },
+        "zoomOut()": {
+          "exex": "zoomOut()"
+        },
+        "FullImage()": {
+          "exex": "FullImage()"
+        },
+        "zoomIn2DMap()": {
+          "exex": "zoomIn2DMap()"
+        },
+        "NavigationCtl": {
+          "exex": "execute(1065,0,'pressDown_Check','NavigationCtl')"
+        },
+        "CenterSign": {
+          "exex": "execute(1065,1,'pressDown_Check','CenterSign')"
+        },
+        "StatusBar": {
+          "exex": "execute(1065,2,'pressDown_Check','StatusBar')"
+        },
+        "ScaleBar": {
+          "exex": "execute(1065,3,'pressDown_Check','ScaleBar')"
+        },
+        "GraphicHUD": {
+          "exex": "execute(1065,5,'pressDown_Check','GraphicHUD')"
+        },
+        "execute(1012,0)": {
+          "exex": "execute(1012,0)"
+        },
+        "execute(1012,1)": {
+          "exex": "execute(1012,1)"
+        },
+        "execute(1012,4)": {
+          "exex": "execute(1012,4)"
+        },
+        "execute(1012,5)": {
+          "exex": "execute(1012,5)"
+        },
+        "execute(1012,6)": {
+          "exex": "execute(1012,6)"
+        },
+        "execute(1012,7)": {
+          "exex": "execute(1012,7)"
+        },
+        "execute(1012,9)": {
+          "exex": "execute(1012,9)"
+        },
+        "execute(1012,10)": {
+          "exex": "execute(1012,10)"
+        },
+        "execute(1012,11)": {
+          "exex": "execute(1012,11)"
+        },
+        "execute(1012,8)": {
+          "exex": "execute(1012,8)"
+        },
+        "execute(1012,13)": {
+          "exex": "execute(1012,13)"
+        },
+        "execute(1012,14)": {
+          "exex": "execute(1012,14)"
+        },
+        "execute(1012,21)": {
+          "exex": "execute(1012,21)"
+        },
+        "execute(1012,24)": {
+          "exex": "execute(1012,24)"
+        },
+        "execute(1012,20)": {
+          "exex": "execute(1012,20)"
+        },
+        "execute(1012,26)": {
+          "exex": "execute(1012,26)"
+        },
+        "execute(1012,27)": {
+          "exex": "execute(1012,27)"
+        },
+        "execute(1086,0)": {
+          "exex": "execute(1086,0)"
+        },
+        "selectLayerF": {
+          "exex": "execute(1070,0,'selectElement','selectLayerF')"
+        },
+        "aeraSelectF": {
+          "exex": "execute(1071,0,'selectElement','aeraSelectF')"
+        },
+        "lineSelect": {
+          "exex": "execute(1072,0,'selectElement','lineSelect')"
+        },
+        "pointSelect": {
+          "exex": "execute(1073,0,'selectElement','pointSelect')"
+        },
+        "ObjSelect": {
+          "exex": "execute(1156,0,'selectElement','ObjSelect')"
+        },
+        "createPresentation()": {
+          "exex": "createPresentation()"
+        },
+        "Presentation(1099,0)": {
+          "exex": "Presentation(1099,0)"
+        },
+        "Presentation(1101,0,this)": {
+          "exex": "Presentation(1101,0,this)"
+        },
+        "Presentation(1102,0)": {
+          "exex": "Presentation(1102,0)"
+        },
+        "Presentation(1111,0)": {
+          "exex": "Presentation(1111,0)"
+        },
+        "Presentation(1112,0)": {
+          "exex": "Presentation(1112,0)"
+        },
+        "Presentation(1116,0)": {
+          "exex": "Presentation(1116,0)"
+        },
+        "execute(1067,0)": {
+          "exex": "execute(1067,0)"
+        },
+        "excavation()": {
+          "exex": "excavation()"
+        },
+        "showAllObj()": {
+          "exex": "showAllObj()"
+        },
+        "hiddenAllObj()": {
+          "exex": "hiddenAllObj()"
+        },
+        "showPipeline()": {
+          "exex": "showPipeline()"
+        },
+        "heightLabel": {
+          "exex": "heightMark()"
+        },
+        "coordLabel": {
+          "exex": "coordLabel()"
+        },
+        "SlopeLable": {
+          "exex": "SlopeLable()"
+        },
+        "clearLabel()": {
+          "exex": "clearLabel()"
+        }
+      }
 		}
 	</script>
 </body>

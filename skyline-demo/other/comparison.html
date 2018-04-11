@@ -991,6 +991,7 @@
 <script>
   var tabs = []
   var css_string_arr = []
+  var btns = {}
   // tabs
   $('#toolbar .tool').each(function(){
     var tab = {}
@@ -1010,14 +1011,19 @@
         var img_src = $(this).find('img').attr('src') || ''
         var img_name = /\/(.*?)(?=\.)/.test(img_src) && img_src.match(/\/(.*?)(?=\.)/)[1]
         css_string_arr.push('.icon-'+img_name+'{background-image: url(\''+img_src+'\')}')
+        var onclick = $(this).attr('onclick')
+        var name = $(this).attr('id') ? $(this).attr('id') : onclick
         if ($(this).hasClass('toolItem1')) {
           tools.push({
-            name: $(this).attr('onclick'),
+            name: name,
             text: $(this).find('a').text(),
             iconCls: 'icon-' + img_name + ' icon-large',
             iconAlign:'top',
             size:'large'
           })
+          btns[name] = {
+            exex: onclick
+          }
         }else if($(this).hasClass('toolItem2')){
           if (!has_sub_tool) {
             sub_tool.type = 'toolbar'
@@ -1026,10 +1032,13 @@
             has_sub_tool = true
           }
           sub_tool.tools.push({
-            name: $(this).attr('onclick'),
+            name: name,
             text: $(this).find('a').text(),
             iconCls: 'icon-' + img_name + ' icon-small',
           })
+          btns[name] = {
+            exex: onclick
+          }
         }else if($(this).hasClass('toolItem3') || $(this).hasClass('toolItem4')){
           if (!has_sub_tool) {
             sub_tool.type = 'toolbar'
@@ -1038,7 +1047,6 @@
             has_sub_tool = true
           }
 
-          console.log($('<div><div/>').text($(this).html()).html().replace(/\r|\n/g, ''))
           sub_tool.tools.push({
             type: 'label',
             text: $('<div><div/>').text($(this).html()).html().replace(/\r|\n/g, ''),
@@ -1054,6 +1062,7 @@
     tabs.push(tab)
   })
   $('body').prepend('<pre>' + JSON.stringify(tabs) + '</pre>')
+  $('body').prepend('<pre>' + JSON.stringify(btns) + '</pre>')
   $('body').prepend('<pre>' + css_string_arr.join("\n") + '</pre>')
 </script>
 </body>
