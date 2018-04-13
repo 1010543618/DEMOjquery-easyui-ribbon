@@ -1011,8 +1011,10 @@
         var img_src = $(this).find('img').attr('src') || ''
         var img_name = /\/(.*?)(?=\.)/.test(img_src) && img_src.match(/\/(.*?)(?=\.)/)[1]
         css_string_arr.push('.icon-'+img_name+'{background-image: url(\''+img_src+'\')}')
-        var onclick = $(this).attr('onclick')
+        var onclick = $(this).attr('onclick') ? $(this).attr('onclick') : ''
+        var exec = onclick.replace(/.*?\((.*?)\)/, '$1').split(',')
         var name = $(this).attr('id') ? $(this).attr('id') : onclick
+        console.log(onclick)
         if ($(this).hasClass('toolItem1')) {
           tools.push({
             name: name,
@@ -1022,7 +1024,10 @@
             size:'large'
           })
           btns[name] = {
-            exex: onclick
+            exex: {
+              code: exec[0] != '' ? exec[0] : onclick,
+              para: exec[1] != undefined ? exec[1] : ''
+            }
           }
         }else if($(this).hasClass('toolItem2')){
           if (!has_sub_tool) {
@@ -1037,7 +1042,10 @@
             iconCls: 'icon-' + img_name + ' icon-small',
           })
           btns[name] = {
-            exex: onclick
+            exex: {
+              code: exec[0] != '' ? exec[0] : onclick,
+              para: exec[1] != undefined ? exec[1] : ''
+            }
           }
         }else if($(this).hasClass('toolItem3') || $(this).hasClass('toolItem4')){
           if (!has_sub_tool) {
